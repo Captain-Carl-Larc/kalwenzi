@@ -1,8 +1,11 @@
 function Projects() {
     return ( 
-        <h1 className="text-4xl">
-            Projects page
-        </h1>
+        <div>
+            <h1>
+                Projects page
+            </h1>
+        </div>
+        
      );
 }
 
