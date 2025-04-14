@@ -1,8 +1,17 @@
+import Link from 'next/link'
+
+
 function About() {
     return ( 
-        <h1 className="text-4xl">
-            About page
-        </h1>
+        <div>
+            <h1 className="text-4xl">
+                About page
+            </h1>
+            <Link href='/'>
+                Home
+            </Link>
+        </div>
+
      );
 }
 
