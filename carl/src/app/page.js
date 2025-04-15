@@ -31,8 +31,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section >
-        About section
+      <section className='bg-orange-600 py-12 flex flex-col items-center'>
+        <h2 className='text-2xl font-semibold'>
+          I am changing world
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eum eos aliquam ducimus dolor explicabo.
+        </p>
+        <button className='bg-gray-950 text-white py-2 px-4 '>
+          More about me
+        </button>        
       </section>
     </div>
   )
