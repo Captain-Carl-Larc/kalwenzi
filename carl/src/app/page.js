@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
+//import { PhoneIcon, MailIcon, MapPinIcon } from '@heroicons/react/24/outline';
+
 
 export default function Home() {
   
@@ -17,34 +19,7 @@ export default function Home() {
     { name: 'Git', icon: CheckCircleIcon },
   ];
   
-  // Option 2: Grid of Skills with Titles
-  const skillsData2 = [
-    { title: 'Frontend', items: ['JavaScript', 'React', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS'] },
-    { title: 'Design', items: ['UI/UX Design', 'Figma'] },
-    { title: 'Backend', items: ['Node.js', 'Express.js', 'Databases (SQL, NoSQL)'] },
-    { title: 'Tools', items: ['Git', 'Webpack/Vite', 'Testing (Jest, etc.)'] },
-  ];
-  
-  // Option 3:  Styled Pills/Tags
-  const skillsData3 = [
-      'JavaScript',
-      'React',
-      'Next.js',
-      'Tailwind CSS',
-      'HTML',
-      'CSS',
-      'UI/UX',
-      'Figma',
-      'Git',
-      'Node.js',
-      'GraphQL',
-      'SQL',
-      'NoSQL',
-      'Jest',
-      'Webpack',
-      'Vite',
-      'TypeScript'
-  ];
+ 
   const featuredProjects = [
     {
       id: 1,
@@ -211,6 +186,59 @@ export default function Home() {
           {skillsData1.map((skill) => (
             <SkillItem key={skill.name} skill={skill} />
           ))}
+        </div>
+      </div>
+    </section>
+    <section className="bg-black py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-white mb-12 text-center">Get in Touch</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Text Description */}
+          <div className="text-gray-300">
+            <p className="mb-4">
+              I'm always open to new projects, collaborations, or just a friendly chat. Feel free to reach out
+              through the form below, and I'll get back to you as soon as possible.
+            </p>
+            <p>
+              You can also connect with me on: <a href="#" className="text-orange-500 hover:underline">LinkedIn</a>, <a href="#" className="text-orange-500 hover:underline">GitHub</a> {/* Add your social links */}
+            </p>
+          </div>
+          {/* Contact Form */}
+          <form className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-200">Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                className="mt-1 block w-full bg-gray-800 border border-gray-700 text-white rounded-md py-3 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-200">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                className="mt-1 block w-full bg-gray-800 border border-gray-700 text-white rounded-md py-3 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-200">Message</label>
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="Your Message"
+                className="mt-1 block w-full bg-gray-800 border border-gray-700 text-white rounded-md py-3 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>
