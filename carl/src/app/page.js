@@ -57,18 +57,32 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='bg-orange-600 py-12 flex flex-col items-center'>
-        <h2 className='text-2xl font-semibold'>
-          I am changing world
+    <section className="bg-orange-500 py-24 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Main Heading */}
+        <h2 className="text-5xl font-bold text-white mb-6">
+          We're <span className="text-black bg-white px-3 py-1 rounded-md">building</span> communities.
         </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eum eos aliquam ducimus dolor explicabo.
+
+        {/* Subheading */}
+        <p className="text-lg text-white opacity-80 mb-8">
+          With a commitment to excellence and a focus on innovation, we've established ourselves as a
+          leader in the real estate and construction industry.
         </p>
-        <button className='bg-gray-950 text-white py-2 px-4 '>
-          More about me
-        </button>        
-      </section>
-      <section className="bg-black py-16">
+
+        {/* Button */}
+        <button className="bg-black text-white font-semibold py-3 px-8 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+          Learn More About Us...
+        </button>
+      </div>
+
+      {/* Decorative Images (Adjust positioning and sizes as needed) */}
+
+
+      {/* Gradient Overlay (Optional - to create a subtle visual effect at the bottom) */}
+      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-orange-500 to-transparent"></div>
+    </section>
+      <section className="bg-black py-16" id='projects-section'>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <div className="mb-12 flex md:flex-row flex-col md:justify-between md:items-center gap-x-16 gap-y-4  ">
