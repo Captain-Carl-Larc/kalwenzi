@@ -1,8 +1,50 @@
 import Link from 'next/link'
 import Image from 'next/image';
-
+import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
 export default function Home() {
+  
+  
+  const skillsData1 = [
+    { name: 'JavaScript', icon: CheckCircleIcon },
+    { name: 'React', icon: CheckCircleIcon },
+    { name: 'Next.js', icon: CheckCircleIcon },
+    { name: 'Tailwind CSS', icon: CheckCircleIcon },
+    { name: 'HTML', icon: CheckCircleIcon },
+    { name: 'CSS', icon: CheckCircleIcon },
+    { name: 'UI/UX Design', icon: CheckCircleIcon },
+    { name: 'Figma', icon: CheckCircleIcon },
+    { name: 'Git', icon: CheckCircleIcon },
+  ];
+  
+  // Option 2: Grid of Skills with Titles
+  const skillsData2 = [
+    { title: 'Frontend', items: ['JavaScript', 'React', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS'] },
+    { title: 'Design', items: ['UI/UX Design', 'Figma'] },
+    { title: 'Backend', items: ['Node.js', 'Express.js', 'Databases (SQL, NoSQL)'] },
+    { title: 'Tools', items: ['Git', 'Webpack/Vite', 'Testing (Jest, etc.)'] },
+  ];
+  
+  // Option 3:  Styled Pills/Tags
+  const skillsData3 = [
+      'JavaScript',
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'HTML',
+      'CSS',
+      'UI/UX',
+      'Figma',
+      'Git',
+      'Node.js',
+      'GraphQL',
+      'SQL',
+      'NoSQL',
+      'Jest',
+      'Webpack',
+      'Vite',
+      'TypeScript'
+  ];
   const featuredProjects = [
     {
       id: 1,
@@ -29,6 +71,15 @@ export default function Home() {
       imageSrc: "/assets/hero.jpeg", // Using the provided image path
     },
   ];
+  const SkillItem = ({ skill }) => {
+    const Icon = skill.icon || CheckCircleIcon; // Default to CheckCircleIcon if no icon provided
+    return (
+      <div className="flex items-center text-gray-300">
+        <Icon className="h-5 w-5 mr-2 text-orange-500" />
+        <span>{skill.name}</span>
+      </div>
+    );
+  };
   return(
     <div>  
     <section className="bg-black py-16 sm:py-32 relative overflow-hidden">
@@ -148,6 +199,20 @@ export default function Home() {
 
           {/* Pagination (Bottom Left)  to be added later*/}
         </div>
+    </section>
+    <section className="bg-black py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-white mb-12 text-center">My Skills & Expertise</h2>
+
+        {/* Choose ONE of the following options (Option 1, 2, or 3) */}
+
+        {/* Option 1: Simple List with Icons */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {skillsData1.map((skill) => (
+            <SkillItem key={skill.name} skill={skill} />
+          ))}
+        </div>
+      </div>
     </section>
     </div>
   )
