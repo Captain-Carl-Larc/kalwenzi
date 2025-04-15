@@ -42,6 +42,30 @@ export default function Home() {
           More about me
         </button>        
       </section>
+      <section className="flex flex-col">
+        <div>
+          Tittle
+        </div>
+        <div className=''>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, maiores harum? Beatae, libero? Molestias in deleniti molestiae commodi, ad natus officia impedit iure, aperiam eum neque assumenda! Beatae, suscipit vero?
+          </p>
+          <button className="bg-blue-700 px-4 py-2 text-white">
+            See all projects
+          </button>
+        </div>
+        <div>
+          project cards come here
+        </div>
+        <div>
+          <div>
+            page display
+          </div>
+          <div>
+            page toggle icons
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
