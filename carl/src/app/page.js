@@ -30,33 +30,44 @@ export default function Home() {
     },
   ];
   return(
-    <div>
-      <section className='bg-red-500 sm:grid sm:grid-cols-2 sm:items-center
-'>
-      <div id="img-cont" className='bg-yellow-500'>
-      <Image src="/assets/hero.jpeg" width={500} height={500} alt="Your alt text"  className="w-full h-auto" />
-        </div>
-        <div id='text-cont' className='bg-green-500 sm:p-6'>
-          <div id="heading">
-            <h1 className="text-4xl font-bold text-center">
-              Solving problems using AI and programming.One problem at a time.
-            </h1>
-          </div>
-          <div id="paragraph" className='sm:p-6'>
-            <p>
-              I use my programming and problem solving skills to solve everyday problems by coming up with cost effective and evnironment friendly solutions.
-            </p>
-          </div>
-          <div id="buttons-cont">
-            <button className='bg-blue-500 px-4 py-2'>
-              Get in Touch
+    <div>  
+    <section className="bg-black py-16 sm:py-32 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+        {/* Text Content */}
+        <div className="text-white text-left sm:text-center lg:text-left">
+          <h1 className="text-2xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Creating a Better <br className="hidden sm:block" /> Tomorrow, One <span className="text-orange-500">Home</span> at a Time
+          </h1>
+          <p className="text-lg text-gray-400 mb-8">
+            We've built a reputation for delivering exceptional results and exceeding our
+            clients' expectations. From luxurious residential homes to state-of-the-art
+            commercial properties, our team of experts is dedicated to bringing your
+            vision to life.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center lg:justify-start gap-4 pt-4">
+            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2  sm:py-3 px-4 sm:px-8 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400">
+              Schedule a Call
             </button>
-            <button className='bg-blue-500 px-4 py-2'>
-              View my Projects
+            <button className="bg-transparent border border-gray-600 text-white font-semibold py-2  sm:py-3 px-4 sm:px-8  rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600">
+              View Our Projects
             </button>
           </div>
         </div>
-      </section>
+
+        {/* Image Content */}
+        <div className="relative aspect-w-9 aspect-h-16 lg:aspect-none lg:h-[600px]">
+          <Image
+            src={featuredProjects[0].imageSrc}// Replace with your actual building image path
+            alt="Modern Building"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg shadow-xl"
+          />
+        </div>
+      </div>
+      {/* Subtle Gradient Overlay at Bottom */}
+      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent"></div>
+    </section>
     <section className="bg-orange-500 py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
