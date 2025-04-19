@@ -3,9 +3,9 @@ import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 const Footer = () => {
     const socialLinks = [
         { name: 'Facebook', icon: Facebook, url: 'https://facebook.com' },       // Replace with your actual URLs
-        { name: 'Twitter', icon: Twitter, url: 'https://twitter.com' },         // Replace with your actual URLs
-        { name: 'Instagram', icon: Instagram, url: 'https://instagram.com' },     // Replace with your actual URLs
-        { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com' },       // Replace with your actual URLs
+        { name: 'Twitter', icon: Twitter, url: 'https://x.com/kalwenzi' },         // Replace with your actual URLs
+        { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/kalwenzi.carl/' },     // Replace with your actual URLs
+        { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/stephenkalwenzi/' },       // Replace with your actual URLs
     ];
 
   return (
@@ -32,17 +32,17 @@ const Footer = () => {
         </div>
                 {/* Copyright */}
         <div className="mb-4 md:mb-0 text-center md:text-left">
-          &copy; {new Date().getFullYear()} My Portfolio. All rights reserved.
+          &copy; {new Date().getFullYear()} Kalwenzi. All rights reserved.
         </div>
          {/* Optional:  Email Link */}
-         <div className="mt-4 md:mt-0 text-center md:text-right">
+{/*          <div className="mt-4 md:mt-0 text-center md:text-right">
             <a
               href="mailto:hello@example.com"  // Replace with your email
               className="text-gray-400 hover:text-white hover:underline"
             >
               hello@example.com
             </a>
-          </div>
+          </div> */}
       </div>
     </footer>
   );

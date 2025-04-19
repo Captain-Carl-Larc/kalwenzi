@@ -23,34 +23,40 @@ export default function Home() {
   const featuredProjects = [
     {
       id: 1,
-      title: "The Grand Estate",
-      description: "A luxurious residential development featuring 12 bespoke homes, each with...",
-      location: "Upper Macungie Township, PA",
-      features: ["Upscale Amenities", "Private Access", "Luxury Finishes"],
-      imageSrc: "/assets/hero.jpeg", // Using the provided image path
+      title: "Personal Portfolio Website",
+      description: "A dynamic and responsive portfolio website built to showcase my skills, projects, and experience as a developer.",
+      technologies: ["React", "JavaScript", "HTML", "CSS", "Responsive Design"],
+      liveDemo: "https://your-portfolio-url.com", // Replace with your actual link
+      githubRepo: "https://github.com/your-username/your-portfolio-repo", // Replace with your actual link
+      imageSrc: "/assets/hero.jpeg", // Add a relevant screenshot
     },
     {
       id: 2,
-      title: "The Business Hub",
-      description: "A state-of-the-art commercial office space designed to meet the needs of modern...",
-      location: "Downtown Philadelphia, PA",
-      features: ["High-Speed Internet", "On-site Restaurant", "Conference Rooms"],
-      imageSrc: "/assets/hero.jpeg", // Using the provided image path
+      title: "Research Link Saver Chrome Extension",
+      description: "A Chrome extension designed to streamline research by allowing users to quickly save links to their local storage for later access.",
+      technologies: ["JavaScript", "Chrome Storage API", "HTML", "CSS"],
+      // No live demo for extensions in the same way, but you could link to a blog post or explanation
+      // liveDemo: "...",
+      githubRepo: "https://github.com/your-username/chrome-extension-repo", // Replace with your actual link
+      imageSrc: "/assets/hero.jpeg", // Add your extension's icon or a screenshot
     },
     {
       id: 3,
-      title: "The Village",
-      description: "A community development featuring a mix of residential and commercial spaces, designed...",
-      location: "Green Valley, CA",
-      features: ["Green Spaces", "Family-Friendly Amenities", "Pet-Friendly"],
-      imageSrc: "/assets/hero.jpeg", // Using the provided image path
+      title: "SME Business Intelligence Dashboard",
+      description: "A comprehensive dashboard application providing Small and Medium-sized Enterprises with key performance indicators and data visualization for informed decision-making.",
+      technologies: ["React", "Node.js", "Express", "PostgreSQL", "Data Visualization Library "],
+      // Replace with a demo link if you have one (could be a video or a limited access demo)
+      // liveDemo: "https://sme-dashboard-demo.com",
+      githubRepo: "https://github.com/your-username/sme-dashboard-repo", // Replace with your actual link (if applicable)
+      imageSrc: "/assets/hero.jpeg", // Add a relevant screenshot
     },
   ];
+
   const SkillItem = ({ skill }) => {
     const Icon = skill.icon || CheckCircleIcon; // Default to CheckCircleIcon if no icon provided
     return (
-      <div className="flex items-center text-gray-300">
-        <Icon className="h-5 w-5 mr-2 text-orange-500" />
+      <div className="flex items-center text-black">
+        <Icon className="h-5 w-5 mr-2 text-gray-950 font-semibold" />
         <span>{skill.name}</span>
       </div>
     );
@@ -62,20 +68,18 @@ export default function Home() {
         {/* Text Content */}
         <div className="text-white text-left sm:text-center lg:text-left">
           <h1 className="text-2xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Creating a Better <br className="hidden sm:block" /> Tomorrow, One <span className="text-orange-500">Home</span> at a Time
+            Using Tech to solve<br className="hidden sm:block" /> Problems, One <span className="text-orange-500">solution</span> at a Time
           </h1>
           <p className="text-lg text-gray-400 mb-8">
-            We've built a reputation for delivering exceptional results and exceeding our
-            clients' expectations. From luxurious residential homes to state-of-the-art
-            commercial properties, our team of experts is dedicated to bringing your
+            I am committed to delivering cost-effective, high quality solutions with AI intergration as needed. From simple SMEs tools, personal websites to corporate softwares, I am dedicated to bringing your
             vision to life.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center lg:justify-start gap-4 pt-4">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2  sm:py-3 px-4 sm:px-8 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400">
+            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2  sm:py-3 px-4 sm:px-8 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 cursor-pointer">
               Schedule a Call
             </button>
-            <button className="bg-transparent border border-gray-600 text-white font-semibold py-2  sm:py-3 px-4 sm:px-8  rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600">
-              View Our Projects
+            <button className="bg-transparent border border-gray-600 text-white font-semibold py-2  sm:py-3 px-4 sm:px-8  rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 cursor-pointer">
+              View my Projects
             </button>
           </div>
         </div>
@@ -98,18 +102,17 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
         <h2 className="text-5xl font-bold text-white mb-6">
-          We're <span className="text-black bg-white px-3 py-1 rounded-md">building</span> communities.
+          I am <span className="text-black bg-white px-3 py-1 rounded-md">revolutionizing</span> Tech solutions.
         </h2>
 
         {/* Subheading */}
         <p className="text-lg text-white opacity-80 mb-8">
-          With a commitment to excellence and a focus on innovation, we've established ourselves as a
-          leader in the real estate and construction industry.
+          My approach is simple. I undertand the problem and then write the most efficient code to solve it. I write readable, clean code.
         </p>
 
         {/* Button */}
-        <button className="bg-black text-white font-semibold py-3 px-8 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
-          Learn More About Us...
+        <button className="bg-black text-white font-semibold py-3 px-8 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 cursor-pointer">
+          Learn More about me
         </button>
       </div>
 
@@ -128,9 +131,7 @@ export default function Home() {
                 <span className="text-white mr-2"></span>Featured Projects
               </h2>
               <p className="text-gray-400 text-sm">
-                We've built a reputation for delivering exceptional results and exceeding our clients' expectations.
-                From luxurious residential homes to state-of-the-art commercial properties, our team of experts is
-                dedicated to bringing your vision to life.
+              As a digital architect, I craft robust and scalable solutions, consistently exceeding expectations. From intuitive user interfaces to complex backend systems, I transform visions into high-performing realities.
               </p>
             </div>
             <button className="bg-transparent border border-gray-600 text-white rounded-md px-2 md:px-4 py-1 md:py-2 text-sm w-32 md:w-1/5 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600">
@@ -140,49 +141,54 @@ export default function Home() {
 
           {/* Projects Grid */}
           <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {featuredProjects.map((project) => (
-              <div key={project.id} className="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-                <div className="relative h-64">
-                  <Image
-                    src={project.imageSrc}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">{project.description}</p>
-                  <div className="flex items-center text-gray-500 text-xs mb-2">
-                    <svg className="w-4 h-4 mr-1 fill-current" viewBox="0 0 20 20"><path d="M10 20S3 10.87 3 6a7 7 0 0 1 14 0c0 4.87-7 14-7 14zm0-16a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
-                    {project.location}
+          {featuredProjects.map((project) => (
+            <div key={project.id} className="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+              <div className="relative h-64">
+                <Image
+                  src={project.imageSrc}
+                  alt={project.title}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                <p className="text-gray-400 text-sm mb-4 line-clamp-2">{project.description}</p>
+                {project.technologies && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="bg-gray-800 text-gray-400 rounded-full px-2 py-1 text-xs">{tech}</span>
+                    ))}
                   </div>
-                  {project.features && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.features.map((feature) => (
-                        <span key={feature} className="bg-gray-800 text-gray-400 rounded-full px-2 py-1 text-xs">{feature}</span>
-                      ))}
-                    </div>
+                )}
+                <div className="flex flex-col gap-2">
+                  {project.liveDemo && (
+                    <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-md text-center">
+                      Live Demo
+                    </a>
                   )}
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-md w-full">
-                    View Property
-                  </button>
+                  {project.githubRepo && (
+                    <a href={project.githubRepo} target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-md text-center">
+                      GitHub Repo
+                    </a>
+                  )}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
 
           {/* Pagination (Bottom Left)  to be added later*/}
         </div>
     </section>
-    <section className="bg-black py-20">
+    <section className=" py-20 bg-orange-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">My Skills & Expertise</h2>
 
         {/* Choose ONE of the following options (Option 1, 2, or 3) */}
 
         {/* Option 1: Simple List with Icons */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {skillsData1.map((skill) => (
             <SkillItem key={skill.name} skill={skill} />
           ))}
@@ -196,11 +202,7 @@ export default function Home() {
           {/* Text Description */}
           <div className="text-gray-300">
             <p className="mb-4">
-              I'm always open to new projects, collaborations, or just a friendly chat. Feel free to reach out
-              through the form below, and I'll get back to you as soon as possible.
-            </p>
-            <p>
-              You can also connect with me on: <a href="#" className="text-orange-500 hover:underline">LinkedIn</a>, <a href="#" className="text-orange-500 hover:underline">GitHub</a> {/* Add your social links */}
+              {`I'm always open to new projects, collaborations, or just a friendly chat. Feel free to reach out through the form below, and I'll get back to you as soon as possible.`}
             </p>
           </div>
           {/* Contact Form */}
